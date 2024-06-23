@@ -39,7 +39,7 @@ nelmio_api_doc:
                                                 type: string
                                             code:
                                                 type: integer
-            /api/v1/testTask/singIn:
+            /api/v1/testTask/signIn:
                 post:
                     requestBody:
                         content:

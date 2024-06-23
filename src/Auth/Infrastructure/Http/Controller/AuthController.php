@@ -2,8 +2,8 @@
 
 namespace App\Auth\Infrastructure\Http\Controller;
 
-use App\Auth\Application\DTO\SingUpDTO;
-use App\Auth\Application\UseCase\Command\SingUp\SingUpCommand;
+use App\Auth\Application\DTO\SignUpDTO;
+use App\Auth\Application\UseCase\Command\SignUp\SignUpCommand;
 use App\Shared\Application\Attribute\RequestBody;
 use App\Shared\Application\DTO\ErrorResponse;
 use App\Shared\Infrastructure\Bus\CommandBus;
@@ -27,11 +27,11 @@ class AuthController extends AbstractController
     )]
     #[OA\Response(response: 400, description: 'RequestBody validation failed', attachables: [new Model(type: ErrorResponse::class)])]
     #[OA\Response(response: 409, description: 'Email already exist', attachables: [new Model(type: ErrorResponse::class)])]
-    #[OA\RequestBody(attachables: [new Model(type: SingUpDTO::class)])]
-    #[Route(path: '/api/v1/testTask/singUp', methods: ['POST'])]
-    public function singUp(#[RequestBody] SingUpDTO $singUpDTO): Response
+    #[OA\RequestBody(attachables: [new Model(type: SignUpDTO::class)])]
+    #[Route(path: '/api/v1/testTask/signUp', methods: ['POST'])]
+    public function signUp(#[RequestBody] SignUpDTO $singUpDTO): Response
     {
-        $command = new SingUpCommand($singUpDTO);
+        $command = new SignUpCommand($singUpDTO);
         /**
          * @var JWTAuthenticationSuccessResponse $result
          */

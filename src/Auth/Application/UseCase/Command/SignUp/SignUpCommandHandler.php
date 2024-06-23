@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Auth\Application\UseCase\Command\SingUp;
+namespace App\Auth\Application\UseCase\Command\SignUp;
 
 use App\Auth\Domain\Service\AuthMaker;
 use App\Shared\Application\Command\CommandHandlerInterface;
@@ -8,7 +8,7 @@ use Lexik\Bundle\JWTAuthenticationBundle\Response\JWTAuthenticationSuccessRespon
 use Lexik\Bundle\JWTAuthenticationBundle\Security\Http\Authentication\AuthenticationSuccessHandler;
 use Symfony\Component\HttpFoundation\Response;
 
-class SingUpCommandHandler implements CommandHandlerInterface
+class SignUpCommandHandler implements CommandHandlerInterface
 {
     public function __construct(
         private readonly AuthMaker $authMaker,
@@ -16,7 +16,7 @@ class SingUpCommandHandler implements CommandHandlerInterface
     {
     }
 
-    public function __invoke(SingUpCommand $singUpCommand): JWTAuthenticationSuccessResponse|Response
+    public function __invoke(SignUpCommand $singUpCommand): JWTAuthenticationSuccessResponse|Response
     {
         $singUpData = $singUpCommand->userSingUpDTO;
         $addAuth = $this->authMaker->make($singUpData->email, $singUpData->password);

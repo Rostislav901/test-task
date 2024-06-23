@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints\EqualTo;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
-class SingUpDTO
+class SignUpDTO
 {
     #[OA\Property(property: 'email', description: 'User email', type: 'string', format: 'format-email', example: 'user@example.com')]
     #[NotBlank]

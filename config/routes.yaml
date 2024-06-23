@@ -13,7 +13,7 @@ api_refresh_token:
     path: /api/v1/testTask/token/refresh
 
 api_login_check:
-    path: /api/v1/testTask/singIn
+    path: /api/v1/testTask/signIn
 
 
 auth_controllers:
