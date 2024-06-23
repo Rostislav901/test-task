@@ -1,5 +1,29 @@
 controllers:
     resource:
-        path: ../src/Controller/
-        namespace: App\Controller
+        path: ../src/Shared/Infrastructure/Controller/
+        namespace: App\Shared\Infrastructure\Controller
+    type: attribute
+
+
+kernel:
+    resource: ../src/Shared/Infrastructure/Kernel.php
+    type: annotation
+
+api_refresh_token:
+    path: /api/v1/testTask/token/refresh
+
+api_login_check:
+    path: /api/v1/testTask/singIn
+
+
+auth_controllers:
+    resource:
+        path: ../src/Auth/Infrastructure/Http/Controller/
+        namespace: App\Auth\Infrastructure\Http\Controller
+    type: attribute
+
+product_controllers:
+    resource:
+        path: ../src/Product/Infrastructure/Http/Controller/
+        namespace: App\Product\Infrastructure\Http\Controller
     type: attribute

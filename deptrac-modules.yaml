@@ -1,0 +1,25 @@
+parameters:
+  paths:
+    - ./src
+  exclude_files:
+    - '#.*\/src\/.*\/Infrastructure\/Adapter\/.*#'
+    - '#.*\/src\/.*\/Infrastructure\/API\/.*#'
+  layers:
+    - name: Shared
+      collectors:
+        - type: directory
+          regex: /src/Shared/.*
+    - name: Product
+      collectors:
+        - type: directory
+          regex: /src/Product/.*y
+    - name: Auth
+      collectors:
+        - type: directory
+          regex: /src/Auth/.*
+
+  ruleset:
+    Product:
+      - Shared
+    Auth:
+      - Shared

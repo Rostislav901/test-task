@@ -1,0 +1,10 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PhpCSFixerValidationInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpIncompatibleReturnTypeInspection" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="DUPLICATE_FROM_SERVER" />
+    <inspection_tool class="PhpParamsInspection" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="DUPLICATE_FROM_SERVER" />
+    <inspection_tool class="PhpUndefinedClassInspection" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" editorAttributes="DUPLICATE_FROM_SERVER" />
+    <inspection_tool class="YamlClassInspection" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="DUPLICATE_FROM_SERVER" />
+  </profile>
+</component>
