@@ -34,7 +34,7 @@ class Product
     #[ORM\Embedded(class: AuthUlid::class)]
     public AuthUlid $creatorUlid;
 
-    #[ORM\ManyToMany(targetEntity: Category::class, inversedBy: 'products')]
+    #[ORM\ManyToMany(targetEntity: Category::class, inversedBy: 'products', cascade: ['persist', 'remove'])]
     #[ORM\JoinTable(name: 'product_category_to_product')]
     #[ORM\JoinColumn(name: 'product_ulid', referencedColumnName: 'ulid')]
     public Collection $categories;
