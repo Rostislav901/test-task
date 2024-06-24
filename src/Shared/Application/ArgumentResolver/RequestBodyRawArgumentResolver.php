@@ -24,7 +24,6 @@ class RequestBodyRawArgumentResolver extends AbstractRequestArgumentResolver
                 JsonEncoder::FORMAT,
             );
         } catch (\Throwable $throwable) {
-            echo $throwable->getMessage();
             throw new RequestBodyConvertException($throwable);
         }
         $errors = $this->validator->validate($model);

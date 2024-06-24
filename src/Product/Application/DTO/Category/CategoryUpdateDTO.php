@@ -18,7 +18,7 @@ class CategoryUpdateDTO
     #[Regex(pattern: '/^[a-zA-Z0-9-_ .,!?\\s]{3,}$/')]
     public ?string $description = null;
 
-    #[OA\Property(property: 'parent', description: 'name of existing category that is not child of self. user string null if you wont to clean parent category ', type: 'string', example: 'example-category', nullable: true)]
+    #[OA\Property(property: 'parent', description: 'name of existing category that is not child of self. Use string  \'null\' if you wont to clean parent category ', type: 'string', example: 'example-category', nullable: true)]
     #[Length(min: 3, max: 64)]
     #[Regex(pattern: '/^[a-zA-Z0-9-_ .,!?\\s]{3,}$/')]
     public ?string $parent = null;
